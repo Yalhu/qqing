@@ -6,7 +6,9 @@
             <!-- <el-col :span="5" v-for="(teacher,index) in teachers.slice(val-1,4)" :key="teacher.id"  :offset="index > 0 ? 1 : 0"> -->
             <el-col :span="6" v-for="(teacher) in teachers.slice(val-1,4)" :key="teacher.id">
                 <el-card :body-style="{ padding: '0px' }">
-                    <img src="/static/images/hamburger.png" class="image">
+                    <!-- <img src="/static/images/hamburger.png" class="image"> -->
+                    <img src="../assets/images/hamburger.png" class="image">
+                    <!-- <img src="./images/hamburger.png" class="image"> -->
                     <div style="padding: 14px;">
                         <span>{{teacher.name}}</span>
                         <p>{{teacher.description}}</p>

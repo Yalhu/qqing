@@ -4,10 +4,11 @@
             <el-carousel :autoplay="false" height="300px">
                 <template v-for="(img,index) in imgs">
                     <el-carousel-item :style="{background:'url(./static/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index">
+                    <!-- <el-carousel-item :style="{background:'url(/static/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
+                    <!-- error -->
+                    <!-- <el-carousel-item :style="{background:'url(./assets/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
+                    <!-- <el-carousel-item :style="{background:'url(./images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
                         <h3>{{ img }}</h3>
-                        <!-- <img :src="'./static/images/'+img+'.webp'" :alt="img"> -->
-                        <!-- <img :src="'./assets/images/'+img+'.webp'" :alt="img"> error-->
-                        <!-- <img :src="require('./assets/images/'+img+'.webp')" :alt="img"> error -->
                     </el-carousel-item>
                 </template>
             </el-carousel>
