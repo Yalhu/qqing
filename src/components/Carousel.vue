@@ -1,13 +1,14 @@
 <template>
     <div id="Carousel">
         <div class="block">
-            <el-carousel :autoplay="false" height="300px">
+            <el-carousel class="self" :autoplay="false" height="300px">
                 <template v-for="(img,index) in imgs">
-                    <el-carousel-item :style="{background:'url(./static/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index">
                     <!-- <el-carousel-item :style="{background:'url(/static/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
-                    <!-- error -->
-                    <!-- <el-carousel-item :style="{background:'url(./assets/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
+                    <el-carousel-item :style="{background:'url(./static/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index">
+                    <!-- blank -->
                     <!-- <el-carousel-item :style="{background:'url(./images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
+                    <!-- <el-carousel-item :style="{background:'url(../assets/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
+                    <!-- <el-carousel-item :style="{background:'url(./assets/images/'+img+(img=='banner3'?'.png':'.webp')+') no-repeat',backgroundSize:'cover'}" :key="index"> -->
                         <h3>{{ img }}</h3>
                     </el-carousel-item>
                 </template>
@@ -51,5 +52,13 @@ export default {
 .test{
     height:10px;
     /* background:url(./assets/images/logo.png) */
+}
+.self .el-carousel__button{  /* not work */
+    border-radius:50%;
+    background:##ff0!important;
+}
+.el-carousel__button{ /* not work */
+    border-radius:30%;
+    background:##f00!important;
 }
 </style>
